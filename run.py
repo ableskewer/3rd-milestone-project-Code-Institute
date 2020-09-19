@@ -9,7 +9,10 @@ def index():
     return render_template("index.html")
 
 
-if __name__ =="__main__":
-    app.run(host=os.getenv("IP"),
-       port=int(os.getenv("PORT")),
-       debug=True)
+@app.route("/post_items")
+def post_items():
+    return render_template("post_items.html")
+
+
+if __name__ == "__main__":
+    app.run(host=os.getenv("IP"), port=int(os.getenv("PORT")), debug=True)
