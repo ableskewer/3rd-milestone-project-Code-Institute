@@ -6,8 +6,14 @@ nav {
   opacity: 0.85;
 }
 
-.nav-wrapper {
-    position: relative;
+#mobile-icon {
+    text-align: right;
+    padding-right: 20px;
+    font-size: 2.2rem;
+}
+
+.side-nav li {
+    background-color: rgba(253, 196, 89, 0.85);
 }
 
 /* main section */
