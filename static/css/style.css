@@ -1,0 +1,48 @@
+/* base.html styling */
+
+/* navbar */
+nav {
+  background-image: linear-gradient(#e08388, #f0a9ac, #a86b6b);
+  opacity: 0.85;
+}
+
+.nav-wrapper {
+    position: relative;
+}
+
+/* main section */
+.background-img {
+  background-image: url("../img/secondhandunsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  margin: 0;
+}
+
+.brand-logo {
+  height: 50px;
+  padding-top: 5px;
+}
+
+.brand-logo img {
+  padding-top: 5px;
+}
+
+nav ul a {
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+nav ul li:first-child {
+    font-weight: bold;
+}
+
+/* footer */
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.8;
+}
