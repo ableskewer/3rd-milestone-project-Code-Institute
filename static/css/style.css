@@ -1,6 +1,6 @@
 /* base.html styling */
 body {
-    color: #fafafa;
+  color: #fafafa;
 }
 /* Navbar */
 nav {
@@ -9,13 +9,13 @@ nav {
 }
 
 #mobile-icon {
-    text-align: right;
-    padding-right: 20px;
-    font-size: 2.2rem;
+  text-align: right;
+  padding-right: 20px;
+  font-size: 2.2rem;
 }
 
 .side-nav li {
-    background-color: rgba(253, 196, 89, 0.85);
+  background-color: rgba(253, 196, 89, 0.85);
 }
 
 /* Main Section */
@@ -37,11 +37,11 @@ nav {
 }
 
 nav ul a {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 .nav-wrapper li:first-child {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 /* Main Section */
@@ -49,69 +49,117 @@ nav ul a {
 /* Index.html */
 
 .header {
-    text-align: center;
-    text-shadow: 2px 2px #000;
+  text-align: center;
+  text-shadow: 2px 2px #000;
 }
 
 .section-index {
-    margin: 0px;
+  margin: 0px;
 }
 
-.header h1 {   
-     font-size: 3.5rem;
-     margin-bottom: 0;
-     margin-top: 80px;
-     
+.header h1 {
+  font-size: 3.5rem;
+  margin-bottom: 0;
+  margin-top: 80px;
 }
 
-.header span {   
-     font-size: 2.5rem;
-     margin: 0;
+.header span {
+  font-size: 2.5rem;
+  margin: 0;
 }
 
 .header a {
-    text-shadow: none;
+  text-shadow: none;
 }
 
 .giveaway {
-    background-color:#fdc459;
-    margin-left: 10px;
-    margin-top: -5px;
-    text-transform: uppercase;
-    font-weight: bold;
-    opacity: 0.9;
+  background-color: #fdc459;
+  margin-left: 10px;
+  margin-top: -5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  opacity: 0.9;
 }
 
 .listings {
-    width: 90%;
-    height: 50vh;
-    margin-top: 50px;
-    border: solid 1px #000;
-    background-color: rgba(255, 255, 255, 0.5);
-    color: #000;
-    
+  width: 90%;
+  margin-top: 50px;
+  border: solid 1px #000;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #000;
+  max-height: 30vh;
+  overflow-y: scroll;
 }
 
 .box-listings {
-    width: 90%;
-    height: auto;
-    border: solid 1px #000;
-    margin: 20px auto 15px;
+  width: 90%;
+  height: auto;
+  border: solid 1px #000;
+  margin: 20px auto 15px;
 }
 
 .row .col.frame {
-    border: solid 1px black;
-    float: left;
-}
-
-.item-title{
-
+  border: solid 1px black;
+  float: left;
 }
 
 .item-description {
-    height: 50px;
+  height: 50px;
 }
 
+/* post_items.html */
+
+.form-listing {
+  margin-top: 70px;
+  font-size: 2.5rem;
+  border: solid 1px black;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 0 50px;
+  max-height: 50vh;
+  overflow-y: scroll;
+}
+
+.form-listing label {
+  color: black;
+  font-size: 1.6rem;
+}
+
+::placeholder {
+  color: rgb(126, 98, 62);
+}
+
+#textarea {
+  margin-bottom: 5px;
+}
+
+.form-slider-title {
+  color: black;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.range-field {
+  margin: 15px 0 5px;
+}
+
+#bad {
+  position: relative;
+  right: 43%;
+  bottom: 60px;
+  font-size: 1.4rem;
+}
+
+#good {
+  position: relative;
+  left: 43%;
+  bottom: 60px;
+  font-size: 1.4rem;
+}
+
+.submit {
+  text-align: center;
+  margin-top: -40px;
+}
 
 /* footer */
 
@@ -124,5 +172,5 @@ footer {
 }
 
 footer.page-footer {
-    padding-top: 0;
+  padding-top: 0;
 }
