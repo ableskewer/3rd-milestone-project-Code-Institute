@@ -5,7 +5,11 @@
     <div class="s10 form-listing">
       <p>List a free item to donate to the community</p>
       <div class="row">
-        <form action="" class="col s12">
+        <form
+          action="{{url_for('create_item') }}"
+          method="POST"
+          class="col s12"
+        >
           <div class="input-field col s12 m6">
             <i class="material-icons prefix">account_circle</i>
             <input
@@ -13,22 +17,29 @@
               id="first_name"
               type="text"
               class="validate"
+              name="first_name"
             />
             <label for="first_name">First Name</label>
           </div>
           <div class="input-field col s12 m6">
             <i class="material-icons prefix">account_circle</i>
-            <input placeholder="Which part of Copenhagen?" id="city" type="text" class="validate" />
+            <input
+              placeholder="Which part of Copenhagen?"
+              id="city"
+              type="text"
+              class="validate"
+              name="city"
+            />
             <label for="first_name">City</label>
           </div>
-
           <div class="input-field col s12 m6">
             <i class="material-icons prefix">account_circle</i>
             <input
               placeholder="Street Name + Number"
-              id="address"
+              id="adress"
               type="text"
               class="validate"
+              name="adress"
             />
             <label for="address">Where do you live?</label>
           </div>
@@ -39,6 +50,7 @@
               id="phone_number"
               type="text"
               class="validate"
+              name="phone_number"
             />
             <label for="phone_number">Mobile Phone</label>
           </div>
@@ -49,10 +61,10 @@
               id="item_title"
               type="text"
               class="validate"
+              name="item_title"
             />
             <label for="item_title">Item</label>
           </div>
-
           <div class="input-field col s12">
             <i class="material-icons prefix">account_circle</i>
             <textarea
@@ -61,6 +73,7 @@
               placeholder="Please add a short description of the item you're giving away"
               maxlength="200"
               rows="5"
+              name="item_description"
             ></textarea>
             <label for="item_description">Item Description</label>
           </div>
@@ -71,7 +84,7 @@
               name="due_date"
               type="text"
               class="datepicker"
-              placeholder="Pick the LAST DAY where you item(s) is available for pickup"
+              placeholder="Pick last possible pickup date"
             />
             <label for="icon_prefix">Date</label>
           </div>
@@ -89,22 +102,14 @@
           <div class="input-field col s12 form-slider-title">
             Item Condition
             <p class="range-field">
-              <input type="range" id="test5" min="0" max="100" /><span id="bad"
+              <input name="item_condition" type="range" id="item_condition" min="0" max="100" /><span id="bad"
                 >Bad</span
               ><span id="good">Perfect</span>
             </p>
           </div>
+          <button class="btn submit waves-effect waves-light" type="submit">Submit Item<i class="material-icons right">send</i></button>
         </form>
-        <div class="input-field col s12 form-slider-title">
-          <button
-            class="btn submit waves-effect waves-light"
-            type="submit"
-            name="action"
-          >
-            Submit Item
-            <i class="material-icons right">send</i>
-          </button>
-        </div>
+        <div class="input-field col s12 form-slider-title"></div>
       </div>
     </div>
   </div>

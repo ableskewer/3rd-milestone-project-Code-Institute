@@ -22,5 +22,12 @@ def post_items():
     return render_template("post_items.html")
 
 
+@app.route('/create_item', methods=['POST'])
+def create_item():
+    items = mongo.db.free_listings
+    items.insert_one(request.form.to_dict())
+    return redirect(url_for('index'))
+
+
 if __name__ == "__main__":
     app.run(host=os.getenv("IP"), port=int(os.getenv("PORT")), debug=True)
