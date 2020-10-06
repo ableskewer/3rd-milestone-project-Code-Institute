@@ -4,6 +4,7 @@ $(document).ready(function () {
   $("#item_description").val("");
   $("#item_description").trigger("autoresize");
 
+    //Does not currently work as intended
   //   $('.datepicker').pickadate({
   //     selectMonths: true, // Creates a dropdown to control month
   //     selectYears: 15, // Creates a dropdown of 15 years to control year,
@@ -13,6 +14,7 @@ $(document).ready(function () {
   //     closeOnSelect: false // Close upon selecting a date,
   //   });
 
+  //Does not currently work as intended
 //   $(".timepicker").pickatime({
 //     default: "now", // Set default time: 'now', '1:30AM', '16:30'
 //     fromnow: 0, // set default time to * milliseconds from now (using with default = 'now')
