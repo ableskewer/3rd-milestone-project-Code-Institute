@@ -8,6 +8,17 @@ nav {
   opacity: 0.85;
 }
 
+body nav ul a {
+  text-shadow: 1px 1px #000;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+nav ul a:hover {
+  background-color: #9d3c16;
+  opacity: 0.8;
+}
+
 #mobile-icon {
   text-align: right;
   padding-right: 20px;
@@ -63,6 +74,7 @@ footer.page-footer {
 .header {
   text-align: center;
   text-shadow: 2px 2px #000;
+  color: #fafafa;
 }
 
 .section-index {
@@ -71,13 +83,15 @@ footer.page-footer {
 
 .header h1 {
   font-size: 3.5rem;
-  margin-bottom: 0;
+  margin-bottom: 20px;
   margin-top: 80px;
 }
 
-.header span {
-  font-size: 2.5rem;
-  margin: 0;
+.header h5 {
+  font-size: 1.5rem;
+  background-color: rgba(253, 196, 89, 0.4);
+  width: 60%;
+  margin: auto;
 }
 
 .header a {
@@ -87,7 +101,7 @@ footer.page-footer {
 .giveaway {
   background-color: #fdc459;
   margin-left: 10px;
-  margin-top: -5px;
+  margin-top: 10px;
   text-transform: uppercase;
   font-weight: bold;
   opacity: 0.9;
@@ -111,6 +125,16 @@ footer.page-footer {
   margin: 20px auto 15px;
 }
 
+.btn {
+  background-color: #fdc459;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #9d3c16;
+  opacity: 0.8;
+}
+
 .row .col.frame {
   border: solid 1px black;
   float: left;
@@ -120,21 +144,27 @@ footer.page-footer {
   height: 50px;
 }
 
-#btn-edit, #btn-delete {
-    width: 50%;
-    float: right;
-    text-align: center;
-    margin: 20px 0;
+#btn-edit,
+#btn-delete {
+  width: 50%;
+  float: right;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.btn-listings a {
+  background-color: #fdc459;
+  font-weight: bold;
 }
 
 #map {
-    height: 20vh;
-    width: 100%;
+  height: 20vh;
+  width: 100%;
 }
 
 .maps-api {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 /* post_items.html */
@@ -144,10 +174,104 @@ footer.page-footer {
   margin-bottom: 100px;
   font-size: 2.5rem;
   border: solid 1px black;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.7);
   padding: 0 50px;
+  color: #9d3c16;
+  font-weight: 600;
   height: auto;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
+}
+
+.input-field {
+  margin-bottom: 40px;
+}
+
+/* #first_name {
+    background: #fafafa;
+    opacity: 0.5;
+} */
+
+.input-field .prefix.active {
+  position: absolute;
+  width: 3rem;
+  font-size: 2rem;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  top: 0.5rem;
+  color: #fdc459;
+}
+
+input:focus::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #000;
+}
+
+input:not([type]):focus:not([readonly]) + label,
+input[type="text"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="password"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="email"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="url"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="time"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="date"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="datetime"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="datetime-local"]:not(.browser-default):focus:not([readonly])
+  + label,
+input[type="tel"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="number"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="search"]:not(.browser-default):focus:not([readonly]) + label,
+textarea.materialize-textarea:focus:not([readonly]) + label {
+  color: #fdc459;
+  text-shadow: 1px 1px #000;
+}
+
+input.valid:not([type]),
+input.valid:not([type]):focus,
+input.valid[type="text"]:not(.browser-default),
+input.valid[type="text"]:not(.browser-default):focus,
+input.valid[type="password"]:not(.browser-default),
+input.valid[type="password"]:not(.browser-default):focus,
+input.valid[type="email"]:not(.browser-default),
+input.valid[type="email"]:not(.browser-default):focus,
+input.valid[type="url"]:not(.browser-default),
+input.valid[type="url"]:not(.browser-default):focus,
+input.valid[type="time"]:not(.browser-default),
+input.valid[type="time"]:not(.browser-default):focus,
+input.valid[type="date"]:not(.browser-default),
+input.valid[type="date"]:not(.browser-default):focus,
+input.valid[type="datetime"]:not(.browser-default),
+input.valid[type="datetime"]:not(.browser-default):focus,
+input.valid[type="datetime-local"]:not(.browser-default),
+input.valid[type="datetime-local"]:not(.browser-default):focus,
+input.valid[type="tel"]:not(.browser-default),
+input.valid[type="tel"]:not(.browser-default):focus,
+input.valid[type="number"]:not(.browser-default),
+input.valid[type="number"]:not(.browser-default):focus,
+input.valid[type="search"]:not(.browser-default),
+input.valid[type="search"]:not(.browser-default):focus,
+textarea.materialize-textarea.valid,
+textarea.materialize-textarea.valid:focus,
+.select-wrapper.valid > input.select-dropdown {
+  border-bottom: 1px solid #fdc459;
+  -webkit-box-shadow: 0 1px 0 0 #fdc459;
+  box-shadow: 0 1px 0 0 #fdc459;
+}
+
+input:not([type]):focus:not([readonly]),
+input[type="text"]:not(.browser-default):focus:not([readonly]),
+input[type="password"]:not(.browser-default):focus:not([readonly]),
+input[type="email"]:not(.browser-default):focus:not([readonly]),
+input[type="url"]:not(.browser-default):focus:not([readonly]),
+input[type="time"]:not(.browser-default):focus:not([readonly]),
+input[type="date"]:not(.browser-default):focus:not([readonly]),
+input[type="datetime"]:not(.browser-default):focus:not([readonly]),
+input[type="datetime-local"]:not(.browser-default):focus:not([readonly]),
+input[type="tel"]:not(.browser-default):focus:not([readonly]),
+input[type="number"]:not(.browser-default):focus:not([readonly]),
+input[type="search"]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #fdc459;
+  -webkit-box-shadow: 0 1px 0 0 #fdc459;
+  box-shadow: 0 1px 0 0 #fdc459;
 }
 
 .form-listing label {
@@ -156,7 +280,8 @@ footer.page-footer {
 }
 
 ::placeholder {
-  color: rgb(126, 98, 62);
+  color: #000;
+  font-weight: 600;
 }
 
 #textarea {
@@ -171,6 +296,14 @@ footer.page-footer {
 
 .range-field {
   margin: 15px 0 5px;
+}
+
+input[type="range"] + .thumb {
+  background-color: #fdc459;
+}
+
+.thumb {
+  background-color: #fdc459;
 }
 
 #bad {

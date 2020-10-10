@@ -19,6 +19,7 @@
               class="validate"
               name="first_name"
               value="{{item.first_name}}"
+              autocomplete="off"
             />
             <label for="first_name">First Name</label>
           </div>
@@ -31,6 +32,7 @@
               class="validate"
               name="city"
               value="{{item.city}}"
+              autocomplete="off"
             />
             <label for="first_name">City</label>
           </div>
@@ -43,6 +45,7 @@
               class="validate"
               name="address"
               value="{{item.adress}}"
+              autocomplete="off"
             />
             <label for="address">Where do you live?</label>
           </div>
@@ -55,6 +58,7 @@
               class="validate"
               name="phone_number"
               value="{{item.phone_number}}"
+              autocomplete="off"
             />
             <label for="phone_number">Mobile Phone</label>
           </div>
@@ -67,6 +71,7 @@
               class="validate"
               name="item_title"
               value="{{item.item_title}}"
+              autocomplete="off"
             />
             <label for="item_title">Item</label>
           </div>
@@ -75,11 +80,12 @@
             <textarea
               id="item_description"
               class="materialize-textarea"
-              placeholder="Please add a short description of the item you're giving away"
+              placeholder="Here goas a short description of the free you're giving away"
               maxlength="200"
               rows="5"
               name="item_description"
               value="{{item.item_description}}"
+              autocomplete="off"
             ></textarea>
             <label for="item_description">Item Description</label>
           </div>
@@ -92,6 +98,7 @@
               class="datepicker"
               placeholder="Pick last possible pickup date"
               value="{{item.due_date}}"
+              autocomplete="off"
             />
             <label for="icon_prefix">Date</label>
           </div>
@@ -104,6 +111,7 @@
               type="text"
               class="timepicker"
               value="{{item.due_time}}"
+              autocomplete="off"
             />
             <label for="icon_prefix">Time</label>
           </div>
@@ -117,6 +125,7 @@
                 min="0"
                 max="100"
                 value="{{item.due_time}}"
+                autocomplete="off"
               /><span id="bad">Bad</span><span id="good">Perfect</span>
             </p>
           </div>

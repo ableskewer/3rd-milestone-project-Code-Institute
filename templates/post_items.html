@@ -3,7 +3,7 @@
 <div class="container">
   <div class="form s12">
     <div class="s10 form-listing">
-      <p>List a free item to donate to the community</p>
+      <p class="header">Help your local community!<br>Donate an Item</p>
       <div class="row">
         <form
           action="{{url_for('create_item') }}"
@@ -11,66 +11,71 @@
           class="col s12"
         >
           <div class="input-field col s12 m6">
-            <i class="material-icons prefix">account_circle</i>
+            <i class="material-icons prefix">perm_identity</i>
             <input
-              placeholder="First Name"
+              placeholder="What do people call you?"
               id="first_name"
               type="text"
               class="validate"
               name="first_name"
+              autocomplete="off"
             />
             <label for="first_name">First Name</label>
           </div>
           <div class="input-field col s12 m6">
-            <i class="material-icons prefix">account_circle</i>
+            <i class="material-icons prefix">location_city</i>
             <input
               placeholder="Which part of Copenhagen?"
               id="city"
               type="text"
               class="validate"
               name="city"
+              autocomplete="off"
             />
             <label for="first_name">City</label>
           </div>
           <div class="input-field col s12 m6">
-            <i class="material-icons prefix">account_circle</i>
+            <i class="material-icons prefix">home</i>
             <input
               placeholder="Street Name + Number"
               id="address"
               type="text"
               class="validate"
               name="adress"
+              autocomplete="off"
             />
-            <label for="address">Where do you live?</label>
+            <label for="address">Pick-up Location</label>
           </div>
           <div class="input-field col s12 m6">
-            <i class="material-icons prefix">account_circle</i>
+            <i class="material-icons prefix">phone_iphone</i>
             <input
-              placeholder="Phone Number"
+              placeholder="Ring Ring?"
               id="phone_number"
               type="text"
               class="validate"
               name="phone_number"
+              autocomplete="off"
             />
             <label for="phone_number">Mobile Phone</label>
           </div>
           <div class="input-field col s12">
-            <i class="material-icons prefix">account_circle</i>
+            <i class="material-icons prefix">add_shopping_cart</i>
             <input
               placeholder="What item(s) would you like to donate"
               id="item_title"
               type="text"
               class="validate"
               name="item_title"
+              autocomplete="off"
             />
             <label for="item_title">Item</label>
           </div>
           <div class="input-field col s12">
-            <i class="material-icons prefix">account_circle</i>
+            <i class="material-icons prefix">format_align_center</i>
             <textarea
               id="item_description"
               class="materialize-textarea"
-              placeholder="Please add a short description of the item you're giving away"
+              placeholder="Tell us a little more about it"
               maxlength="200"
               rows="5"
               name="item_description"
@@ -78,36 +83,45 @@
             <label for="item_description">Item Description</label>
           </div>
           <div id="matfix" class="input-field col s12">
-            <i class="material-icons prefix">account_circle</i>
+            <i class="material-icons prefix">date_range</i>
             <input
               id="due_date"
               name="due_date"
               type="text"
               class="datepicker"
-              placeholder="Pick last possible pickup date"
+              placeholder="Last possible pickup date"
+              autocomplete="off"
             />
             <label for="icon_prefix">Date</label>
           </div>
-          <div class="input-field col s12">
-            <i class="material-icons prefix">account_circle</i>
+          <div class="input-field col s12"> 
+            <i class="material-icons prefix">access_time</i>
             <input
               id="due_time"
               name="due_time"
-              placeholder="Pick the LAST TIME of the last day your item(s) is availble for pickup "
+              placeholder="Chose LAST TIME of the last day your item(s) is availble for pickup "
               type="text"
               class="timepicker"
+              autocomplete="off"
             />
             <label for="icon_prefix">Time</label>
           </div>
           <div class="input-field col s12 form-slider-title">
             Item Condition
             <p class="range-field">
-              <input name="item_condition" type="range" id="item_condition" min="0" max="100" /><span id="bad"
-                >Bad</span
-              ><span id="good">Perfect</span>
+              <input
+                name="item_condition"
+                type="range"
+                id="item_condition"
+                min="0"
+                max="100"
+                autocomplete="off"
+              /><span id="bad">Bad</span><span id="good">Perfect</span>
             </p>
           </div>
-          <button class="btn submit waves-effect waves-light" type="submit">Submit Item<i class="material-icons right">send</i></button>
+          <button class="btn submit waves-effect waves-light fast_forward" type="submit"><i class="material-icons right">fast_forward</i>
+            Submit Item
+          </button>
         </form>
         <div class="input-field col s12 form-slider-title"></div>
       </div>
