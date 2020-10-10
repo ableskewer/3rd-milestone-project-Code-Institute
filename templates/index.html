@@ -1,65 +1,42 @@
 {% extends 'base.html' %} {% block content %}
 
 <section class="row section-index">
-	<div class="header">
-		<h1>Collect Free Items All Over Copenhagen</h1>
-		<span
+  <div class="header">
+    <h1>Collect Free Items All Over Copenhagen</h1>
+    <span
       >Save The Planet While Doing So<a
         href="{{ url_for('post_items') }}"
         class="btn waves-effect waves-light giveaway"
         >Give away an Item</a
-      ></span>
-	</div>
-	<div class="container listings">
-		<div class="box-listings row">
-			<div class="col s12 m6 l4">
-				<div class="row">
-					<div class="col frame s12 item-title">Title
-						{% for task in listings%}
-						{{task.first_name}}
-						{{task.last_name}}
-						{{task.adress}}
-						{{task.phone_number}}
-						{{task.item_description}}
-						{% endfor %}
-					</div>
-					<div class="col frame s12 item-description">Description</div>
-				</div>
-			</div>
-			<div class="col s12 m6 l4">
-				<div class="row">
-					<div class="col frame s12">Phone number</div>
-					<div class="col frame s12">Date picker</div>
-					<div class="col frame s12">Address</div>
-				</div>
-			</div>
-			<div class="maps-api col s12 m12 l4">
-				<div class="row">
-					<div id="map" class="col frame s12">Google maps api</div>
-				</div>
-			</div>
-		</div>
-		<div class="box-listings row">
-			<div class="col s12 m6 l4">
-				<div class="row">
-					<div class="col frame s12 item-title">Title</div>
-					<div class="col frame s12 item-description">Description</div>
-				</div>
-			</div>
-			<div class="col s12 m6 l4">
-				<div class="row">
-					<div class="col frame s12">Phone number</div>
-					<div class="col frame s12">Date picker</div>
-					<div class="col frame s12">Address</div>
-				</div>
-			</div>
-			<div class="maps-api col s12 m12 l4">
-				<div class="row">
-					<div class="col frame s12">Google maps api</div>
-				</div>
-			</div>
-		</div>
-	</div>
+      ></span
+    >
+  </div>
+  <div class="container listings">
+    <div class="box-listings row">
+      <div class="col s12">
+        {% for item in items %}
+        <div class="row">
+          <div class="col frame s12 item-title">
+            {{item.first_name}} {{item.city}} {{item.adress}}
+            {{item.phone_number}} {{item.item_title}} {{item.item_description}}
+            {{item.due_date}} {{item.due_time}} <br> Item Condition: {{item.item_condition}}
+          </div>
+          <div id="btn-edit">
+            <a href="{{url_for('edit_item', item_id=item._id)}}" class="waves-effect waves-light btn">Edit Item Listing</a>
+          </div>
+          <div id="btn-delete">
+            <a href="{{url_for('delete_item', item_id=item._id)}}" class="waves-effect waves-light btn">Delete Listing</a>
+          </div>
+          <div class="maps-api col s12 m12">
+            <div class="row">
+              <div id="map" class="col frame s12"></div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 </section>
 
 {% endblock %}

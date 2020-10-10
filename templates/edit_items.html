@@ -3,10 +3,10 @@
 <div class="container">
   <div class="form s12">
     <div class="s10 form-listing">
-      <p>List a free item to donate to the community</p>
+      <p>Edit some or all of the information of the Item</p>
       <div class="row">
         <form
-          action="{{url_for('create_item') }}"
+          action="{{ url_for('update_item', item_id=item._id) }}"
           method="POST"
           class="col s12"
         >
@@ -18,6 +18,7 @@
               type="text"
               class="validate"
               name="first_name"
+              value="{{item.first_name}}"
             />
             <label for="first_name">First Name</label>
           </div>
@@ -29,6 +30,7 @@
               type="text"
               class="validate"
               name="city"
+              value="{{item.city}}"
             />
             <label for="first_name">City</label>
           </div>
@@ -36,10 +38,11 @@
             <i class="material-icons prefix">account_circle</i>
             <input
               placeholder="Street Name + Number"
-              id="address"
+              id="adress"
               type="text"
               class="validate"
-              name="adress"
+              name="address"
+              value="{{item.adress}}"
             />
             <label for="address">Where do you live?</label>
           </div>
@@ -51,6 +54,7 @@
               type="text"
               class="validate"
               name="phone_number"
+              value="{{item.phone_number}}"
             />
             <label for="phone_number">Mobile Phone</label>
           </div>
@@ -62,6 +66,7 @@
               type="text"
               class="validate"
               name="item_title"
+              value="{{item.item_title}}"
             />
             <label for="item_title">Item</label>
           </div>
@@ -74,6 +79,7 @@
               maxlength="200"
               rows="5"
               name="item_description"
+              value="{{item.item_description}}"
             ></textarea>
             <label for="item_description">Item Description</label>
           </div>
@@ -85,6 +91,7 @@
               type="text"
               class="datepicker"
               placeholder="Pick last possible pickup date"
+              value="{{item.due_date}}"
             />
             <label for="icon_prefix">Date</label>
           </div>
@@ -96,18 +103,26 @@
               placeholder="Pick the LAST TIME of the last day your item(s) is availble for pickup "
               type="text"
               class="timepicker"
+              value="{{item.due_time}}"
             />
             <label for="icon_prefix">Time</label>
           </div>
           <div class="input-field col s12 form-slider-title">
             Item Condition
             <p class="range-field">
-              <input name="item_condition" type="range" id="item_condition" min="0" max="100" /><span id="bad"
-                >Bad</span
-              ><span id="good">Perfect</span>
+              <input
+                name="item_condition"
+                type="range"
+                id="item_condition"
+                min="0"
+                max="100"
+                value="{{item.due_time}}"
+              /><span id="bad">Bad</span><span id="good">Perfect</span>
             </p>
           </div>
-          <button class="btn submit waves-effect waves-light" type="submit">Submit Item<i class="material-icons right">send</i></button>
+          <button class="btn submit waves-effect waves-light" type="submit">
+            Edit Item<i class="material-icons right">send</i>
+          </button>
         </form>
         <div class="input-field col s12 form-slider-title"></div>
       </div>
